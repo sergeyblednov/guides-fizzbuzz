@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var numberButton: UIButton!
+    var game: Game?
+    var gameScore: Int? {
+        didSet {
+            numberButton.setTitle("1", for: .normal)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        game = Game()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +29,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func play(move: String) {
+        guard let unwrapedGame = game else {
+            print("Game is nil")
+            return
+        }
+        let response = unwrapedGame.play(move: move)
+        gameScore = response.score
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        play(move: "1")
+    }
 
 }
 

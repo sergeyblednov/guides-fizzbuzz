@@ -1,14 +1,14 @@
 //
-//  FizzBuzzUITests.swift
-//  FizzBuzzUITests
+//  ViewControllerUITests.swift
+//  FizzBuzz
 //
-//  Created by Sergiy Blednov on 11/3/16.
+//  Created by Sergiy Blednov on 11/4/16.
 //  Copyright © 2016 Sergiy Blednov. All rights reserved.
 //
 
 import XCTest
 
-class FizzBuzzUITests: XCTestCase {
+class ViewControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -28,9 +28,19 @@ class FizzBuzzUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTapNumberButtonIncrementsScore() {
+        XCUIApplication().buttons["numberButton"].tap()
+        let newScore = XCUIApplication().buttons["numberButton"].label
+        XCTAssertEqual(newScore, "1")
     }
+    
+//    func testDoubleTapNumberButtonIncrementsScore() {
+//        
+//        let numberbuttonButton = XCUIApplication().buttons["numberButton"]
+//        numberbuttonButton.tap()
+//        numberbuttonButton.tap()
+//        let newScore = numberbuttonButton.label
+//        XCTAssertEqual(newScore, "2")
+//    }
     
 }
