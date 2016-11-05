@@ -18,6 +18,7 @@
 		7B0795C11DCBD87D00F3F0DF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0795C01DCBD87D00F3F0DF /* Game.swift */; };
 		7B2E3F131DCD3AB8005A1693 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E3F121DCD3AB8005A1693 /* ViewControllerUnitTests.swift */; };
 		7B2E3F151DCD468D005A1693 /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E3F141DCD468D005A1693 /* ViewControllerUITests.swift */; };
+		7B2E3F171DCE11B4005A1693 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E3F161DCE11B4005A1693 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7B0795C01DCBD87D00F3F0DF /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7B2E3F121DCD3AB8005A1693 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		7B2E3F141DCD468D005A1693 /* ViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
+		7B2E3F161DCE11B4005A1693 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				7B0795981DCBC6E200F3F0DF /* Info.plist */,
 				7B0795BC1DCBC84D00F3F0DF /* Brain.swift */,
 				7B0795C01DCBD87D00F3F0DF /* Game.swift */,
+				7B2E3F161DCE11B4005A1693 /* Move.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2E3F171DCE11B4005A1693 /* Move.swift in Sources */,
 				7B07958F1DCBC6E200F3F0DF /* ViewController.swift in Sources */,
 				7B0795BD1DCBC84D00F3F0DF /* Brain.swift in Sources */,
 				7B07958D1DCBC6E200F3F0DF /* AppDelegate.swift in Sources */,

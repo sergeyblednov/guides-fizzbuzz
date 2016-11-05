@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.swift
 //  FizzBuzz
 //
@@ -11,10 +11,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var numberButton: UIButton!
+    @IBOutlet weak var fizzButton: UIButton!
+    @IBOutlet weak var buzzButton: UIButton!
+    @IBOutlet weak var fizzBuzzButton: UIButton!
+    
     var game: Game?
     var gameScore: Int? {
         didSet {
-            numberButton.setTitle("1", for: .normal)
+            if let newScore = gameScore {
+                numberButton.setTitle("\(newScore)", for: .normal)
+            }
         }
     }
     
@@ -22,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         game = Game()
+        gameScore = game?.score
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +36,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func play(move: String) {
+    func play(move: Move) {
         guard let unwrapedGame = game else {
             print("Game is nil")
             return
@@ -39,8 +46,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        play(move: "1")
+        switch sender {
+        case numberButton:
+            play(move: Move.Number)
+        case fizzButton:
+            play(move: Move.Fizz)
+        case buzzButton:
+            play(move: Move.Buzz)
+        case fizzBuzzButton:
+            play(move: Move.FizzBuzz)
+        default:
+            print("Invalid selection")
+        }
     }
-
 }
 
